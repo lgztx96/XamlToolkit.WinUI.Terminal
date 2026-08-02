@@ -34,6 +34,12 @@ This project is part of [CommunityToolkit.WinUI](https://github.com/lgztx96/Comm
 
 Install the NuGet package, implement the settings interfaces (`IControlSettings`, `ICoreSettings`, `IControlAppearance`, `ICoreAppearance`, `ICoreScheme`), create a `ConptyConnection` for the shell, and add the `TermControl` to your UI. See the sample projects for complete working examples.
 
+## Try it out
+
+Download and run the pre-built sample app:
+
+- [TerminalSample-win-x86.zip](https://github.com/lgztx96/XamlToolkit.WinUI.Terminal/releases/download/0.1.0-alpha/TerminalSample-win-x86.zip)
+
 ## Samples
 
 Both sample applications demonstrate:
