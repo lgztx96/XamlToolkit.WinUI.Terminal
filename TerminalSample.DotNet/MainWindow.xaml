@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Window
+    x:Class="TerminalSample.DotNet.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:TerminalSample.DotNet"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="TerminalSample.DotNet"
+    Closed="OnWindowClosed"
+    mc:Ignorable="d">
+
+    <Window.SystemBackdrop>
+        <DesktopAcrylicBackdrop />
+    </Window.SystemBackdrop>
+
+    <Grid ActualThemeChanged="OnActualThemeChanged">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <TitleBar
+            x:Name="AppTitleBar"
+            Title="Windows Terminal"
+            Subtitle="WinUI 3 (.Net 10)">
+            <TitleBar.IconSource>
+                <FontIconSource Glyph="&#xF4AA;" />
+            </TitleBar.IconSource>
+        </TitleBar>
+
+        <!--  Terminal host container  -->
+        <TabView
+            x:Name="TerminalHost"
+            Grid.Row="1"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            AddTabButtonClick="OnAddTabButtonClick"
+            TabCloseRequested="OnTabCloseRequested" />
+    </Grid>
+</Window>

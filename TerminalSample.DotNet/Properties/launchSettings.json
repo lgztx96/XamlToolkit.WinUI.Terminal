@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TerminalSample.DotNet (Unpackaged)": {
+      "commandName": "Project",
+      "debugEngines": "managed,native"
+    }
+  }
+}

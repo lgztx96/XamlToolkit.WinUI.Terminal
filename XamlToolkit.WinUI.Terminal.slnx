@@ -1,0 +1,30 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="ARM64" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/nuget/">
+    <File Path="nuget/README.md" />
+    <File Path="nuget/XamlToolkit.WinUI.Terminal.Managed.targets" />
+    <File Path="nuget/XamlToolkit.WinUI.Terminal.Native.targets" />
+    <File Path="nuget/XamlToolkit.WinUI.Terminal.nuspec" />
+  </Folder>
+  <Project Path="TerminalSample.Cpp/TerminalSample.Cpp.vcxproj" Id="ef0af96c-bac8-4e40-b621-d50e591bcfe5">
+    <Deploy />
+  </Project>
+  <Project Path="TerminalSample.DotNet/TerminalSample.DotNet.csproj" Id="d4d3ea2f-f272-441f-8f30-773aa5b5acce">
+    <Platform Solution="*|Any CPU" Project="x64" />
+    <Platform Solution="*|ARM64" Project="ARM64" />
+    <Platform Solution="*|x64" Project="x64" />
+    <Platform Solution="*|x86" Project="x86" />
+    <Deploy Solution="*|Any CPU" />
+    <Deploy Solution="*|x64" />
+  </Project>
+  <Project Path="XamlToolkit.WinUI.Terminal/XamlToolkit.WinUI.Terminal.csproj">
+    <Platform Solution="Release|ARM64" Project="ARM64" />
+    <Platform Solution="Release|x64" Project="x64" />
+    <Platform Solution="Release|x86" Project="x86" />
+  </Project>
+</Solution>

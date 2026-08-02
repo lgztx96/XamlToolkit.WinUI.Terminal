@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <!-- Resolve platform from RuntimeIdentifier or Platform -->
+    <TerminalPlatform Condition="$(RuntimeIdentifier.EndsWith('-x64'))">x64</TerminalPlatform>
+    <TerminalPlatform Condition="$(RuntimeIdentifier.EndsWith('-x86'))">x86</TerminalPlatform>
+    <TerminalPlatform Condition="$(RuntimeIdentifier.EndsWith('-arm64'))">arm64</TerminalPlatform>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TerminalPlatform)' == ''">
+    <TerminalPlatform Condition="'$(Platform)' == 'Win32'">x86</TerminalPlatform>
+    <TerminalPlatform Condition="'$(Platform)' != 'Win32'">$(Platform)</TerminalPlatform>
+    <TerminalPlatform Condition="'$(Platform)' == 'AnyCPU'"></TerminalPlatform>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <WindowsMetadataReference Include="$(MSBuildThisFileDirectory)..\..\lib\native\Microsoft.Terminal.Control.winmd"
+                              Implementation="Microsoft.Terminal.Control.dll" />
+    <WindowsMetadataReference Include="$(MSBuildThisFileDirectory)..\..\lib\native\Microsoft.Terminal.Core.winmd" />
+    <WindowsMetadataReference Include="$(MSBuildThisFileDirectory)..\..\lib\native\Microsoft.Terminal.Settings.Model.winmd"
+                              Implementation="Microsoft.Terminal.Settings.Model.dll" />
+    <WindowsMetadataReference Include="$(MSBuildThisFileDirectory)..\..\lib\native\Microsoft.Terminal.TerminalConnection.winmd"
+                              Implementation="Microsoft.Terminal.TerminalConnection.dll" />
+    <WindowsMetadataReference Include="$(MSBuildThisFileDirectory)..\..\lib\native\Microsoft.Terminal.UI.winmd"
+                              Implementation="Microsoft.Terminal.UI.dll" />
+    <SDKReference Include="Microsoft.VCLibs.Desktop, Version=14.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TerminalPlatform)' != ''">
+    <None Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-$(TerminalPlatform)\native\OpenConsole.exe">
+	  <Link>OpenConsole.exe</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <Target Name="TerminalWarnNoPlatform" BeforeTargets="BeforeBuild"
+          Condition="'$(TerminalPlatform)' == '' and '$(TerminalWarnNoPlatform)' != 'false'">
+    <Warning Code="TTL0001"
+             Text="XamlToolkit.WinUI.Terminal: cannot resolve native DLLs because the project is building as 'AnyCPU'. Build with a RID (e.g. 'win-x64') or set 'TerminalWarnNoPlatform' to 'false' to suppress." />
+  </Target>
+
+</Project>

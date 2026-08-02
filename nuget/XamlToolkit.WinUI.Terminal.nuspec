@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>XamlToolkit.WinUI.Terminal</id>
+    <version>0.1.0-alpha</version>
+    <title>XamlToolkit.WinUI.Terminal</title>
+    <authors>lgztx96</authors>
+    <owners>lgztx96</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/lgztx96/XamlToolkit.WinUI.Terminal</projectUrl>
+    <description>Windows Terminal for WinUI 3 — C++/WinRT and .NET</description>
+    <readme>README.md</readme>
+    <tags>Windows Terminal TermControl WinUI WinRT WindowsAppSDK WASDK WinAppSDK Xaml</tags>
+
+    <dependencies>
+      <dependency id="Microsoft.WindowsAppSDK.WinUI" version="1.8.260709004" />
+    </dependencies>
+  </metadata>
+
+  <files>
+    <!-- =================== Managed interop DLL =================== -->
+    <file target="lib\net8.0-windows10.0.26100.0\XamlToolkit.WinUI.Terminal.dll"
+          src="..\XamlToolkit.WinUI.Terminal\bin\Release\net8.0-windows10.0.26100.0\XamlToolkit.WinUI.Terminal.dll" />
+
+    <!-- =================== WinMD metadata (shared, not arch-specific) =================== -->
+    <file target="lib\native\Microsoft.Terminal.Control.winmd"
+          src="..\Microsoft.Terminal.Control\Microsoft.Terminal.Control.winmd" />
+    <file target="lib\native\Microsoft.Terminal.Core.winmd"
+          src="..\Microsoft.Terminal.Control\Microsoft.Terminal.Core.winmd" />
+    <file target="lib\native\Microsoft.Terminal.Settings.Model.winmd"
+          src="..\Microsoft.Terminal.Control\Microsoft.Terminal.Settings.Model.winmd" />
+    <file target="lib\native\Microsoft.Terminal.TerminalConnection.winmd"
+          src="..\Microsoft.Terminal.Control\Microsoft.Terminal.TerminalConnection.winmd" />
+    <file target="lib\native\Microsoft.Terminal.UI.winmd"
+          src="..\Microsoft.Terminal.Control\Microsoft.Terminal.UI.winmd" />
+
+    <!-- =================== x64 native =================== -->
+    <file target="runtimes\win-x64\native\Microsoft.Terminal.Control.dll"
+          src="..\Microsoft.Terminal.Control\x64\Microsoft.Terminal.Control.dll" />
+    <file target="runtimes\win-x64\native\Microsoft.Terminal.Control.pri"
+          src="..\Microsoft.Terminal.Control\Microsoft.Terminal.Control.pri" />
+    <file target="runtimes\win-x64\native\Microsoft.Terminal.Settings.Model.dll"
+          src="..\Microsoft.Terminal.Control\x64\Microsoft.Terminal.Settings.Model.dll" />
+    <file target="runtimes\win-x64\native\Microsoft.Terminal.Settings.Model.pri"
+          src="..\Microsoft.Terminal.Control\Microsoft.Terminal.Settings.Model.pri" />
+    <file target="runtimes\win-x64\native\Microsoft.Terminal.Settings.Model.Lib.pri"
+          src="..\Microsoft.Terminal.Control\Microsoft.Terminal.Settings.Model.Lib.pri" />
+    <file target="runtimes\win-x64\native\Microsoft.Terminal.TerminalConnection.dll"
+          src="..\Microsoft.Terminal.Control\x64\Microsoft.Terminal.TerminalConnection.dll" />
+    <file target="runtimes\win-x64\native\Microsoft.Terminal.TerminalConnection.pri"
+          src="..\Microsoft.Terminal.Control\Microsoft.Terminal.TerminalConnection.pri" />
+    <file target="runtimes\win-x64\native\Microsoft.Terminal.UI.dll"
+          src="..\Microsoft.Terminal.Control\x64\Microsoft.Terminal.UI.dll" />
+    <file target="runtimes\win-x64\native\Microsoft.Terminal.UI.pri"
+          src="..\Microsoft.Terminal.Control\Microsoft.Terminal.UI.pri" />
+    <file target="runtimes\win-x64\native\OpenConsole.exe"
+          src="..\Microsoft.Terminal.Control\x64\OpenConsole.exe" />
+
+    <!-- =================== x86 native =================== -->
+    <file target="runtimes\win-x86\native\Microsoft.Terminal.Control.dll"
+          src="..\Microsoft.Terminal.Control\Win32\Microsoft.Terminal.Control.dll" />
+    <file target="runtimes\win-x86\native\Microsoft.Terminal.Control.pri"
+          src="..\Microsoft.Terminal.Control\Microsoft.Terminal.Control.pri" />
+    <file target="runtimes\win-x86\native\Microsoft.Terminal.Settings.Model.dll"
+          src="..\Microsoft.Terminal.Control\Win32\Microsoft.Terminal.Settings.Model.dll" />
+    <file target="runtimes\win-x86\native\Microsoft.Terminal.Settings.Model.pri"
+          src="..\Microsoft.Terminal.Control\Microsoft.Terminal.Settings.Model.pri" />
+    <file target="runtimes\win-x86\native\Microsoft.Terminal.Settings.Model.Lib.pri"
+          src="..\Microsoft.Terminal.Control\Microsoft.Terminal.Settings.Model.Lib.pri" />
+    <file target="runtimes\win-x86\native\Microsoft.Terminal.TerminalConnection.dll"
+          src="..\Microsoft.Terminal.Control\Win32\Microsoft.Terminal.TerminalConnection.dll" />
+    <file target="runtimes\win-x86\native\Microsoft.Terminal.TerminalConnection.pri"
+          src="..\Microsoft.Terminal.Control\Microsoft.Terminal.TerminalConnection.pri" />
+    <file target="runtimes\win-x86\native\Microsoft.Terminal.UI.dll"
+          src="..\Microsoft.Terminal.Control\Win32\Microsoft.Terminal.UI.dll" />
+    <file target="runtimes\win-x86\native\Microsoft.Terminal.UI.pri"
+          src="..\Microsoft.Terminal.Control\Microsoft.Terminal.UI.pri" />
+    <file target="runtimes\win-x86\native\OpenConsole.exe"
+          src="..\Microsoft.Terminal.Control\Win32\OpenConsole.exe" />
+
+    <!-- =================== ARM64 native =================== -->
+    <file target="runtimes\win-arm64\native\Microsoft.Terminal.Control.dll"
+          src="..\Microsoft.Terminal.Control\ARM64\Microsoft.Terminal.Control.dll" />
+    <file target="runtimes\win-arm64\native\Microsoft.Terminal.Control.pri"
+          src="..\Microsoft.Terminal.Control\Microsoft.Terminal.Control.pri" />
+    <file target="runtimes\win-arm64\native\Microsoft.Terminal.Settings.Model.dll"
+          src="..\Microsoft.Terminal.Control\ARM64\Microsoft.Terminal.Settings.Model.dll" />
+    <file target="runtimes\win-arm64\native\Microsoft.Terminal.Settings.Model.pri"
+          src="..\Microsoft.Terminal.Control\Microsoft.Terminal.Settings.Model.pri" />
+    <file target="runtimes\win-arm64\native\Microsoft.Terminal.Settings.Model.Lib.pri"
+          src="..\Microsoft.Terminal.Control\Microsoft.Terminal.Settings.Model.Lib.pri" />
+    <file target="runtimes\win-arm64\native\Microsoft.Terminal.TerminalConnection.dll"
+          src="..\Microsoft.Terminal.Control\ARM64\Microsoft.Terminal.TerminalConnection.dll" />
+    <file target="runtimes\win-arm64\native\Microsoft.Terminal.TerminalConnection.pri"
+          src="..\Microsoft.Terminal.Control\Microsoft.Terminal.TerminalConnection.pri" />
+    <file target="runtimes\win-arm64\native\Microsoft.Terminal.UI.dll"
+          src="..\Microsoft.Terminal.Control\ARM64\Microsoft.Terminal.UI.dll" />
+    <file target="runtimes\win-arm64\native\Microsoft.Terminal.UI.pri"
+          src="..\Microsoft.Terminal.Control\Microsoft.Terminal.UI.pri" />
+    <file target="runtimes\win-arm64\native\OpenConsole.exe"
+          src="..\Microsoft.Terminal.Control\ARM64\OpenConsole.exe" />
+
+    <!-- =================== README =================== -->
+    <file target="README.md" src="README.md" />
+
+    <!-- =================== .targets =================== -->
+    <file target="build\native\XamlToolkit.WinUI.Terminal.targets"
+          src="XamlToolkit.WinUI.Terminal.Native.targets" />
+    <file target="build\net8.0-windows10.0.26100.0\XamlToolkit.WinUI.Terminal.targets"
+          src="XamlToolkit.WinUI.Terminal.Managed.targets" />
+  </files>
+</package>
