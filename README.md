@@ -6,6 +6,8 @@ This project wraps the official [`TermControl`](https://github.com/microsoft/ter
 
 Based on Windows Terminal source code around **v1.25.1171.0**.
 
+This project is part of [CommunityToolkit.WinUI](https://github.com/lgztx96/CommunityToolkit.WinUI).
+
 ![XamlToolkit.WinUI.Terminal](Terminal.png)
 
 ## Features
