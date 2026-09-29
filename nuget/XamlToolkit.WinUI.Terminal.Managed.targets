@@ -17,7 +17,6 @@
   <ItemGroup>
     <WindowsMetadataReference Include="$(MSBuildThisFileDirectory)..\..\lib\native\Microsoft.Terminal.Control.winmd"
                               Implementation="Microsoft.Terminal.Control.dll" />
-    <WindowsMetadataReference Include="$(MSBuildThisFileDirectory)..\..\lib\native\Microsoft.Terminal.Core.winmd" />
     <WindowsMetadataReference Include="$(MSBuildThisFileDirectory)..\..\lib\native\Microsoft.Terminal.Settings.Model.winmd"
                               Implementation="Microsoft.Terminal.Settings.Model.dll" />
     <WindowsMetadataReference Include="$(MSBuildThisFileDirectory)..\..\lib\native\Microsoft.Terminal.TerminalConnection.winmd"
